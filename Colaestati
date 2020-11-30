@@ -1,0 +1,44 @@
+package colaestati;
+import java.util.Scanner;
+
+public class Colaestati {
+    public static void main(String[] args) {
+        /*
+        E3U2
+        */
+        MetodosCola objMetodosCola = new MetodosCola();
+         
+        Scanner entrada=new Scanner(System.in);
+        int opc,c = 0;
+        do{
+            System.out.println(" *Cola Estatica GamerPink* ");
+            System.out.println("-----------------------------");
+            System.out.println("Selecciones su Opcion: ");
+            System.out.println("1 Insertar Dato");
+            System.out.println("2 Mostrar Dato");
+            System.out.println("3 Eliminar Dato");
+            System.out.println("4 Salir");
+            System.out.println("-----------------------------");
+            opc = entrada.nextInt();
+            System.out.println("-----------------------------");
+            switch(opc){
+                case 1:
+                    objMetodosCola.insertar();
+                    System.out.println("**************************");
+                    break;
+                case 2:
+                    objMetodosCola.mostrar();
+                    System.out.println("**************************");
+                    break;
+                case 3:
+                    objMetodosCola.eliminar();
+                    System.out.println("**************************");
+                    break;
+                case 4:
+                    System.exit(0);
+                    break;
+            }
+        }while(c==0);
+    }
+    
+}
