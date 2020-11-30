@@ -1,0 +1,36 @@
+package colaestati;
+import java.util.Scanner;
+
+public class MetodosCola {
+    Scanner entrada = new Scanner(System.in);
+    int [] pilaA= new int [5];
+    int conta=0;
+    int arriba=-1;
+    
+    public void insertar(){
+        if(conta<5){
+            System.out.println("Inserte dato: ");
+            pilaA[conta] =entrada.nextInt();
+            conta++;
+        }else{
+            System.out.println("No hay espacio");
+        }
+    }
+    public void mostrar(){
+        if(conta==0){
+            System.out.println("No Tienes Datos");
+        }else{
+            System.out.println("Datos desde tu pila");
+            for(int i=0; i<pilaA.length;i++)
+                System.out.println(pilaA[i]);
+        }
+    }
+    public void eliminar(){
+        if(conta==0){
+            System.out.println("No hay datos");
+        }else{
+            arriba++;
+            pilaA[arriba]=0;
+        }
+    }
+}
